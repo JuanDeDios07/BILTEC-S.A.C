@@ -50,5 +50,25 @@ public class BoletaServicioServiceImpl implements BoletaServicioService {
 		return boletaServicioRepository.findById(idboletaSer);
 	}
 
+	@Override
+	public boolean registra01(BoletaServicio boletaServicio) {
+		try {
+			boletaServicioRepository.save(boletaServicio);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(BoletaServicio boletaServicio) {
+		try {
+			boletaServicioRepository.save(boletaServicio);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
 
 }

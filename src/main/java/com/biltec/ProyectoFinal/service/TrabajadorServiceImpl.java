@@ -50,6 +50,26 @@ public class TrabajadorServiceImpl implements TrabajadorService{
 		
 		return trabajadorrepository.findById(dni);
 	}
+
+	@Override
+	public boolean registra01(Trabajador trabajador) {
+		try {
+			trabajadorrepository.save(trabajador);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Trabajador trabajador) {
+		try {
+			trabajadorrepository.save(trabajador);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
 	
 	
 }

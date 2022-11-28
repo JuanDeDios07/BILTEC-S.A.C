@@ -19,4 +19,7 @@ public interface ComprobantesService {
 		 
 	public	 Optional<Comprobantes> ListarId(String nomCom);
 	
+	public	 boolean registra01(Comprobantes comprobantes);
+		
+		public	boolean actualizar01(Comprobantes comprobantes);
 }

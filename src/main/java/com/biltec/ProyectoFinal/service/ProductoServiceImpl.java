@@ -49,7 +49,26 @@ public Optional<Producto> ListarId(String idproducto) {
 
 	return productorepository.findById(idproducto);
 }
-   
+
+@Override
+public boolean registra01(Producto producto) {
+	try {
+		productorepository.save(producto);
+		return true;
+	}catch(Exception e) {
+	return false;
+}
+}
+
+@Override
+public boolean actualizar01(Producto producto) {
+	try {
+		productorepository.save(producto);
+		return true;
+	}catch(Exception e) {
+	return false;
+}
+}
    
 	
 }

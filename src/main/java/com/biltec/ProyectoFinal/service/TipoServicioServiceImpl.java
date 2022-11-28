@@ -49,6 +49,26 @@ public class TipoServicioServiceImpl implements TipoServicioService{
 		
 		return tiposerviciorepository.findById(idservicio);
 	}
+
+	@Override
+	public boolean registra01(TipoServicio tiposervicio) {
+		try {
+			tiposerviciorepository.save(tiposervicio);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(TipoServicio tiposervicio) {
+		try {
+			tiposerviciorepository.save(tiposervicio);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
 	
 	
 	

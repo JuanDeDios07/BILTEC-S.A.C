@@ -18,4 +18,8 @@ public interface CategoriaService {
 	public	 boolean eliminar(Integer idcat);
 		 
 	public	 Optional<Categoria> ListarId(Integer idcat);
+	
+	public	 boolean registra01(Categoria categoria);
+	
+	public	boolean actualizar01(Categoria categoria);
 }

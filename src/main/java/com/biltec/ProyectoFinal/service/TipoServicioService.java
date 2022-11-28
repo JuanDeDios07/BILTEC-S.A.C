@@ -19,4 +19,8 @@ public interface TipoServicioService {
 	public	boolean eliminar(String idservicio);
 		 
 	public	Optional<TipoServicio> ListarId(String idservicio);
+	
+	public	 boolean registra01(TipoServicio tiposervicio);
+	
+	public	boolean actualizar01(TipoServicio tiposervicio);
 }

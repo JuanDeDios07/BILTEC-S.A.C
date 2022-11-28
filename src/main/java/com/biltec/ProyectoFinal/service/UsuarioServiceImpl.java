@@ -49,6 +49,26 @@ public class UsuarioServiceImpl implements UsuarioService {
 		
 		return usuarioRepository.findById(idusuario);
 	}
+
+	@Override
+	public boolean registra01(Usuario usuario) {
+		try {
+			usuarioRepository.save(usuario);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Usuario usuario) {
+		try {
+			usuarioRepository.save(usuario);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
 	
 	
 }

@@ -49,6 +49,26 @@ public class TiendaServiceImple implements TiendaService{
 		
 		return tiendarepository.findById(idtienda);
 	}
+
+	@Override
+	public boolean registra01(Tienda tienda) {
+		try {
+			tiendarepository.save(tienda);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Tienda tienda) {
+		try {
+			tiendarepository.save(tienda);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
 	
 	
 }

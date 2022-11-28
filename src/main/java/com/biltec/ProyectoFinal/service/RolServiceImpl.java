@@ -49,6 +49,26 @@ public class RolServiceImpl implements RolService{
 		
 		return rolrepository.findById(idrol);
 	}
+
+	@Override
+	public boolean registra01(Rol rol) {
+		try {
+			rolrepository.save(rol);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Rol rol) {
+		try {
+			rolrepository.save(rol);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
 	
 	
 }

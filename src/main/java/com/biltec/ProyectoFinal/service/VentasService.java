@@ -18,4 +18,8 @@ public interface VentasService {
 		public	boolean eliminar(String idventas);
 			 
 		public	Optional<Ventas> ListarId(String idventas);
+		
+		public	 boolean registra01(Ventas ventas);
+		
+		public	boolean actualizar01(Ventas ventas);
 }

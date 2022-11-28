@@ -17,4 +17,8 @@ public interface TiendaService {
 	public	boolean eliminar(String idtienda);
 		 
 	public	Optional<Tienda> ListarId(String idtienda);
+	
+	public	 boolean registra01(Tienda tienda);
+	
+	public	boolean actualizar01(Tienda tienda);
 }

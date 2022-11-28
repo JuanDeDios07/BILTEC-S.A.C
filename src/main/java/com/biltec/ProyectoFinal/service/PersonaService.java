@@ -17,4 +17,8 @@ public interface PersonaService {
 	public	 boolean eliminar(String idpersona);
 		 
 	public	 Optional<Persona> ListarId(String idpersona);
+	
+	public	 boolean registra01(Persona persona);
+		
+		public	boolean actualizar01(Persona persona);
 }

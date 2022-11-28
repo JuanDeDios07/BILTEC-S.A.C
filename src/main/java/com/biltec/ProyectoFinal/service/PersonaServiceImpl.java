@@ -49,5 +49,25 @@ public class PersonaServiceImpl implements PersonaService{
 		return personarepository.findById(idpersona);
 	}
 
+	@Override
+	public boolean registra01(Persona persona) {
+		try {
+			personarepository.save(persona);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Persona persona) {
+		try {
+			personarepository.save(persona);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
 	
 }

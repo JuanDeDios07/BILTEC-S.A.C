@@ -17,4 +17,8 @@ public interface UsuarioService {
 		public	boolean eliminar(String idusuario);
 			 
 		public	Optional<Usuario> ListarId(String idusuario);
+		
+		public	 boolean registra01(Usuario usuario);
+		
+		public	boolean actualizar01(Usuario usuario);
 }

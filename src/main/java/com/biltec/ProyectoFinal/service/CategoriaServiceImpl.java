@@ -49,6 +49,26 @@ public class CategoriaServiceImpl implements CategoriaService{
 		
 		return categoriaRepository.findById(idcat);
 	}
+
+	@Override
+	public boolean registra01(Categoria categoria) {
+		try {
+			categoriaRepository.save(categoria);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Categoria categoria) {
+		try {
+			categoriaRepository.save(categoria);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
 	
 	
 }

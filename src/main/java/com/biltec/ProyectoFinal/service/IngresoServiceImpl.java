@@ -49,6 +49,26 @@ public class IngresoServiceImpl implements IngresoService{
 		
 		return ingresoRepository.findById(idingre);
 	}
+
+	@Override
+	public boolean registra01(Ingreso ingreso) {
+		try {
+			ingresoRepository.save(ingreso);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Ingreso ingreso) {
+		try {
+			ingresoRepository.save(ingreso);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
 	
 	
 }

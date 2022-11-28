@@ -18,4 +18,8 @@ public interface BoletaServicioService {
 			 
 		public	 Optional<BoletaServicio> ListarId(String idboletaSer);
 		
+		public	 boolean registra01(BoletaServicio boletaServicio);
+		
+		public	boolean actualizar01(BoletaServicio boletaServicio);
+		
 }

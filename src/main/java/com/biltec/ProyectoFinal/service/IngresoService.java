@@ -16,4 +16,7 @@ public interface IngresoService {
 			 
 		public	 Optional<Ingreso> ListarId(String idingre);
 		
+		public	 boolean registra01(Ingreso ingreso);
+		
+		public	boolean actualizar01(Ingreso ingreso);
 }

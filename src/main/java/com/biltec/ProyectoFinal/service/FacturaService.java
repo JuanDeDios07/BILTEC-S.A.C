@@ -19,4 +19,7 @@ public interface FacturaService {
 			 
 		public	 Optional<Factura> ListarId(Integer nomFac);
 		
+		public	 boolean registra01(Factura factura);
+		
+		public	boolean actualizar01(Factura factura);
 }

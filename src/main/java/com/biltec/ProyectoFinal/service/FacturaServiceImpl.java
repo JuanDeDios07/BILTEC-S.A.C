@@ -49,6 +49,26 @@ public class FacturaServiceImpl implements FacturaService{
 	
 		return facturaRepository.findById(nomFac);
 	}
+
+	@Override
+	public boolean registra01(Factura factura) {
+		try {
+			facturaRepository.save(factura);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Factura factura) {
+		try {
+			facturaRepository.save(factura);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
 	
 	
 }

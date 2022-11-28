@@ -49,6 +49,26 @@ public class VentasServieImpl implements VentasService{
 		
 		return ventasRepository.findById(idventas);
 	}
+
+	@Override
+	public boolean registra01(Ventas ventas) {
+		try {
+			ventasRepository.save(ventas);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Ventas ventas) {
+		try {
+			ventasRepository.save(ventas);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
 	
 	
 }

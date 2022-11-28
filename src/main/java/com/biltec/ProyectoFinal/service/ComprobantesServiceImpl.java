@@ -49,6 +49,26 @@ public class ComprobantesServiceImpl implements ComprobantesService{
 		
 		return comprobanteRepository.findById(nomCom);
 	}
+
+	@Override
+	public boolean registra01(Comprobantes comprobantes) {
+		try {
+			comprobanteRepository.save(comprobantes);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Comprobantes comprobantes) {
+		try {
+			comprobanteRepository.save(comprobantes);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
 	
 	
 }

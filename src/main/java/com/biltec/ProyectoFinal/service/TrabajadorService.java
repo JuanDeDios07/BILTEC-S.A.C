@@ -19,4 +19,8 @@ public interface TrabajadorService {
 		public	boolean eliminar(String dni);
 			 
 		public	Optional<Trabajador> ListarId(String dni);
+		
+		public	 boolean registra01(Trabajador trabajador);
+		
+		public	boolean actualizar01(Trabajador trabajador);
 }

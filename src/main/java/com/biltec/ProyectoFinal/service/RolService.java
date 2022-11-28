@@ -18,4 +18,8 @@ public interface RolService {
 	public	boolean eliminar(String idrol);
 		 
 	public	Optional<Rol> ListarId(String idrol);
+	
+   public	 boolean registra01(Rol rol);
+	
+	public	boolean actualizar01(Rol rol);
 }

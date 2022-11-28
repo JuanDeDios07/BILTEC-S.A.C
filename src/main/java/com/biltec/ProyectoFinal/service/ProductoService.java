@@ -17,4 +17,8 @@ public interface ProductoService {
 	public	 boolean eliminar(String idproducto);
 		 
 	public	 Optional<Producto> ListarId(String idproducto);
+	
+   public	 boolean registra01(Producto producto);
+	
+	public	boolean actualizar01(Producto producto);
 }
