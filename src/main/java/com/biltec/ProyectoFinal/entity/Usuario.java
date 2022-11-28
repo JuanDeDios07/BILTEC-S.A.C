@@ -16,8 +16,9 @@ public class Usuario {
 
 	@Id
 	private String idusuario;
-
+	@Column(length = 100)
 	private String email;
+	@Column(length = 80)
 	private String clave;
 	
 	@OneToMany(mappedBy = "usuario")

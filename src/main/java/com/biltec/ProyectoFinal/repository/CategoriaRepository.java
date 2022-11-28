@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.biltec.ProyectoFinal.entity.Categoria;
 
 @Repository
-public interface CategoriaRepository extends JpaRepository<Categoria, String> {
+public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
 
 }

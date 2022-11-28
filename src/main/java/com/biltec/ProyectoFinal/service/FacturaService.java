@@ -15,8 +15,8 @@ public interface FacturaService {
 			
 		public	Factura actualizar(Factura factura);
 			 
-		public	 boolean eliminar(String nomFac);
+		public	 boolean eliminar(Integer nomFac);
 			 
-		public	 Optional<Factura> ListarId(String nomFac);
+		public	 Optional<Factura> ListarId(Integer nomFac);
 		
 }

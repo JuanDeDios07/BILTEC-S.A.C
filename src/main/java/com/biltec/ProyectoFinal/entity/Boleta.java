@@ -2,7 +2,10 @@ package com.biltec.ProyectoFinal.entity;
 import java.sql.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -11,16 +14,20 @@ import javax.persistence.Table;
 @Table(name = "boleta")
 @Entity(name = "Boleta")
 public class Boleta {
-
+	
 	@Id
 	@JoinColumn(name = "num_boleta")
-	private String numBoleta;
-
-	private char dni;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer numBoleta;
+	@Column(length = 8)
+	private String dni;
 	private Date fecha;
+	@Column(length = 90)
 	private String señor;
+	@Column(length = 50)
 	private String direccion;
 	private int cantidad;
+	@Column(length = 120)
 	private String descripcion;
 	private double importe;
 	private double total;
@@ -32,9 +39,8 @@ public class Boleta {
 		
 	}
 
-	public Boleta(String numBoleta, char dni, Date fecha, String señor, String direccion, int cantidad,
+	public Boleta(Integer numBoleta, String dni, Date fecha, String señor, String direccion, int cantidad,
 			String descripcion, double importe, double total, List<Comprobantes> tipocomprobantes) {
-		
 		this.numBoleta = numBoleta;
 		this.dni = dni;
 		this.fecha = fecha;
@@ -47,19 +53,19 @@ public class Boleta {
 		this.tipocomprobantes = tipocomprobantes;
 	}
 
-	public String getNumBoleta() {
+	public Integer getNumBoleta() {
 		return numBoleta;
 	}
 
-	public void setNumBoleta(String numBoleta) {
+	public void setNumBoleta(Integer numBoleta) {
 		this.numBoleta = numBoleta;
 	}
 
-	public char getDni() {
+	public String getDni() {
 		return dni;
 	}
 
-	public void setDni(char dni) {
+	public void setDni(String dni) {
 		this.dni = dni;
 	}
 
@@ -126,6 +132,7 @@ public class Boleta {
 	public void setTipocomprobantes(List<Comprobantes> tipocomprobantes) {
 		this.tipocomprobantes = tipocomprobantes;
 	}
+
 	
 	
 	

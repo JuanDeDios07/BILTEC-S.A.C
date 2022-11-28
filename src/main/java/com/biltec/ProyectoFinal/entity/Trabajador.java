@@ -1,5 +1,6 @@
 package com.biltec.ProyectoFinal.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -11,12 +12,15 @@ import javax.persistence.Table;
 public class Trabajador {
 
 	@Id
+	@Column(length = 8)
 	private String dni;
-	
-
+	@Column(length = 80)
 	private String nombre;
+	@Column(length = 80)
 	private String apellidos;
+	@Column(length = 100)
 	private String direccion;
+	@Column(length = 9)
 	private String telefono;
 	
 	

@@ -34,7 +34,7 @@ public class CategoriaServiceImpl implements CategoriaService{
 	}
 
 	@Override
-	public boolean eliminar(String idcat) {
+	public boolean eliminar(Integer idcat) {
 		try {
 			Optional<Categoria> u=ListarId(idcat);
 			categoriaRepository.delete(u.get());
@@ -45,7 +45,7 @@ public class CategoriaServiceImpl implements CategoriaService{
 	}
 
 	@Override
-	public Optional<Categoria> ListarId(String idcat) {
+	public Optional<Categoria> ListarId(Integer idcat) {
 		
 		return categoriaRepository.findById(idcat);
 	}

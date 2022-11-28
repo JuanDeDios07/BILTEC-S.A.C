@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -14,15 +16,21 @@ import javax.persistence.Table;
 @Entity(name = "Factura")
 public class Factura {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JoinColumn(name = "num_factura")
-	private String numFactura;
+	private Integer numFactura;
 	@JoinColumn(name = "ruc")
-	private int ruc;
+	@Column(length = 11)
+	private String ruc;
 	private Date fecha;
+	@Column(length = 120)
 	private String señor;
+	@Column(length = 80)
 	private String direccion;
+	@Column(length = 80)
 	private String descripcion;
 	@JoinColumn(name = "tipo_moneda")
+	@Column(length = 50)
 	private String tipoMoneda;
 	private int cantidad;
 	private double igv;
@@ -36,10 +44,9 @@ public class Factura {
 		
 	}
 
-	public Factura(String numFactura, int ruc, Date fecha, String señor, String direccion, String descripcion,
+	public Factura(Integer numFactura, String ruc, Date fecha, String señor, String direccion, String descripcion,
 			String tipoMoneda, int cantidad, double igv, double precio, double total,
 			List<Comprobantes> tipocomprobantes) {
-		
 		this.numFactura = numFactura;
 		this.ruc = ruc;
 		this.fecha = fecha;
@@ -54,19 +61,19 @@ public class Factura {
 		this.tipocomprobantes = tipocomprobantes;
 	}
 
-	public String getNumFactura() {
+	public Integer getNumFactura() {
 		return numFactura;
 	}
 
-	public void setNumFactura(String numFactura) {
+	public void setNumFactura(Integer numFactura) {
 		this.numFactura = numFactura;
 	}
 
-	public int getRuc() {
+	public String getRuc() {
 		return ruc;
 	}
 
-	public void setRuc(int ruc) {
+	public void setRuc(String ruc) {
 		this.ruc = ruc;
 	}
 
@@ -149,6 +156,8 @@ public class Factura {
 	public void setTipocomprobantes(List<Comprobantes> tipocomprobantes) {
 		this.tipocomprobantes = tipocomprobantes;
 	}
+
+	
 	
 	
 }

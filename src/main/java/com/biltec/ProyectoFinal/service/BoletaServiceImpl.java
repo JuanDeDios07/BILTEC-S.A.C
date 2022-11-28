@@ -32,7 +32,7 @@ public class BoletaServiceImpl implements BoletaService{
 	}
 
 	@Override
-	public boolean eliminar(String numB) {
+	public boolean eliminar(Integer numB) {
 		try {
 			Optional<Boleta> u=ListarId(numB);
 			boletaRepository.delete(u.get());
@@ -43,9 +43,30 @@ public class BoletaServiceImpl implements BoletaService{
 	}
 
 	@Override
-	public Optional<Boleta> ListarId(String numB) {
+	public Optional<Boleta> ListarId(Integer numB) {
 		
 		return boletaRepository.findById(numB);
+	}
+
+	@Override
+	public boolean registra01(Boleta boleta) {
+		try {
+			boletaRepository.save(boleta);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
+	}
+
+	@Override
+	public boolean actualizar01(Boleta boleta) {
+		
+		try {
+			boletaRepository.save(boleta);
+			return true;
+		}catch(Exception e) {
+		return false;
+	}
 	}
 
 }

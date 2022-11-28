@@ -2,6 +2,7 @@ package com.biltec.ProyectoFinal.entity;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -14,10 +15,9 @@ import javax.persistence.Table;
 public class Comprobantes {
 	
 		@Id
+		@Column(length = 50)
 		private String nombreComprobante;
 		
-		
-
 		@OneToMany(mappedBy = "comprobantes")
 		List<Ventas> ventas;
 		

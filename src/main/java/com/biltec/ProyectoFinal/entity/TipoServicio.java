@@ -2,9 +2,8 @@ package com.biltec.ProyectoFinal.entity;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -14,6 +13,7 @@ import javax.persistence.Table;
 public class TipoServicio {
 	@Id
 	private String idservicio;
+	@Column(length = 100)
 	private String servicios;
 	
 	@OneToMany(mappedBy = "tiposervicio")

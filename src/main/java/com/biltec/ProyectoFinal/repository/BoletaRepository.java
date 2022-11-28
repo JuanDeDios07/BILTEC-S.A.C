@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.biltec.ProyectoFinal.entity.Boleta;
 
 @Repository
-public interface BoletaRepository extends JpaRepository<Boleta, String>{
+public interface BoletaRepository extends JpaRepository<Boleta, Integer>{
 
 }

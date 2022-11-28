@@ -3,9 +3,8 @@ package com.biltec.ProyectoFinal.entity;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -16,12 +15,14 @@ import javax.persistence.Table;
 public class Tienda {
 	@Id
 	private String idtienda;
+	@Column(length = 80)
 	private String nombre;
+	@Column(length = 100)
 	private String direccion;
 	@JoinColumn(name = "año_arriendo")
 	private Date añoArriendo;
 	@JoinColumn(name = "pago_arriendo")
-	private Date pagoArriendo;
+	private double pagoArriendo;
 	
 	@OneToMany(mappedBy = "tienda")
 	List<Trabajador> trabajadors;
@@ -30,7 +31,7 @@ public class Tienda {
 		
 	}
 
-	public Tienda(String idtienda, String nombre, String direccion, Date añoArriendo, Date pagoArriendo,
+	public Tienda(String idtienda, String nombre, String direccion, Date añoArriendo, double pagoArriendo,
 			List<Trabajador> trabajadors) {
 		
 		this.idtienda = idtienda;
@@ -73,11 +74,11 @@ public class Tienda {
 		this.añoArriendo = añoArriendo;
 	}
 
-	public Date getPagoArriendo() {
+	public double getPagoArriendo() {
 		return pagoArriendo;
 	}
 
-	public void setPagoArriendo(Date pagoArriendo) {
+	public void setPagoArriendo(double pagoArriendo) {
 		this.pagoArriendo = pagoArriendo;
 	}
 

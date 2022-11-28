@@ -2,6 +2,7 @@ package com.biltec.ProyectoFinal.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -17,6 +18,7 @@ public class Ingreso {
 	@JoinColumn(name = "precio_venta")
 	private double precioVenta;
 	private Date fecha;
+	@Column(length = 50)
 	private String garantia;
 	
 	@ManyToOne

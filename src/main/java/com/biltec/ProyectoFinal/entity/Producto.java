@@ -2,9 +2,8 @@ package com.biltec.ProyectoFinal.entity;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -17,12 +16,16 @@ public class Producto {
 
 	@Id
 	private String idproducto;
-	
+	@Column(length = 100)
 	private String nombre;
+	@Column(length = 80)
 	private String modelo;
+	@Column(length = 80)
 	private String marca;
+	@Column(length = 80)
 	private String codigo;
 	private int stock;
+	@Column(length = 100)
 	private String descripcion;
 	
 	@ManyToOne

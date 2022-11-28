@@ -15,7 +15,7 @@ public interface CategoriaService {
 		
 	public	Categoria actualizar(Categoria categoria);
 		 
-	public	 boolean eliminar(String idcat);
+	public	 boolean eliminar(Integer idcat);
 		 
-	public	 Optional<Categoria> ListarId(String idcat);
+	public	 Optional<Categoria> ListarId(Integer idcat);
 }

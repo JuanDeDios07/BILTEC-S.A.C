@@ -3,9 +3,8 @@ package com.biltec.ProyectoFinal.entity;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -19,13 +18,19 @@ public class Persona {
 	private String idpersona;
 	
 	@JoinColumn(name = "tipo_persona")
+	@Column(length = 80)
 	private String tipoPersona;
+	@Column(length = 80)
 	private String nombre;
 	@JoinColumn(name = "tipo_documento")
+	@Column(length = 50)
 	private String tipoDocumento;
 	@JoinColumn(name = "num_documento")
+	@Column(length = 20)
 	private String numDocumento;
+	@Column(length = 100)
 	private String direccion;
+	@Column(length = 9)
 	private String telefono;
 	
 	@OneToMany(mappedBy = "persona")

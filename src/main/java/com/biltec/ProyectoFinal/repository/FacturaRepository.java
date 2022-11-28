@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.biltec.ProyectoFinal.entity.Factura;
 
 @Repository
-public interface FacturaRepository extends JpaRepository<Factura, String>{
+public interface FacturaRepository extends JpaRepository<Factura, Integer>{
 
 }

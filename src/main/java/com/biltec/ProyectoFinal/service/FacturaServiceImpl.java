@@ -34,7 +34,7 @@ public class FacturaServiceImpl implements FacturaService{
 	}
 
 	@Override
-	public boolean eliminar(String nomFac) {
+	public boolean eliminar(Integer nomFac) {
 		try {
 			Optional<Factura> u=ListarId(nomFac);
 			facturaRepository.delete(u.get());
@@ -45,7 +45,7 @@ public class FacturaServiceImpl implements FacturaService{
 	}
 
 	@Override
-	public Optional<Factura> ListarId(String nomFac) {
+	public Optional<Factura> ListarId(Integer nomFac) {
 	
 		return facturaRepository.findById(nomFac);
 	}

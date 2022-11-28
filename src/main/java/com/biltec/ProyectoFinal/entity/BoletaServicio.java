@@ -2,28 +2,33 @@ package com.biltec.ProyectoFinal.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.springframework.stereotype.Service;
 
 @Table(name = "boletaServicio")
 @Entity(name = "BoletaServicio")
 
 public class BoletaServicio {
 	@Id
-	private String idboletaservicio;
+	private Integer idboletaservicio;
+	@Column(length = 50)
 	private String garantia;
 	@JoinColumn(name = "precio_servico")
 	private double precioSrevico;
+	@Column(length = 10)
 	private String telefono;
 	private Date fecha;
 	@JoinColumn(name = "tipo_producto")
+	@Column(length = 50)
 	private String tipoProducto;
+	@Column(length = 50)
 	private String marca;
+	@Column(length = 50)
 	private String modelo;
 	
 	@ManyToOne
@@ -38,9 +43,8 @@ public class BoletaServicio {
 		
 	}
 
-	public BoletaServicio(String idboletaservicio, String garantia, double precioSrevico, String telefono, Date fecha,
+	public BoletaServicio(Integer idboletaservicio, String garantia, double precioSrevico, String telefono, Date fecha,
 			String tipoProducto, String marca, String modelo, Persona persona, TipoServicio tiposervicio) {
-		
 		this.idboletaservicio = idboletaservicio;
 		this.garantia = garantia;
 		this.precioSrevico = precioSrevico;
@@ -53,11 +57,11 @@ public class BoletaServicio {
 		this.tiposervicio = tiposervicio;
 	}
 
-	public String getIdboletaservicio() {
+	public Integer getIdboletaservicio() {
 		return idboletaservicio;
 	}
 
-	public void setIdboletaservicio(String idboletaservicio) {
+	public void setIdboletaservicio(Integer idboletaservicio) {
 		this.idboletaservicio = idboletaservicio;
 	}
 
@@ -132,6 +136,8 @@ public class BoletaServicio {
 	public void setTiposervicio(TipoServicio tiposervicio) {
 		this.tiposervicio = tiposervicio;
 	}
+
+	
 	
 	
 }
